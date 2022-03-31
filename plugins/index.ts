@@ -51,7 +51,7 @@ export default [
       /\.vue$/,
       /\.vue\?vue/, // .vue
     ],
-    dts: true,
+    dts: "plugins/types/auto-imports.d.ts",
     imports: AutoGenerateImports(),
   }),
   // 将包信息文件作为 vite 的配置文件之一，为 vite-plugin-optimize-persist 所用
