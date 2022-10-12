@@ -2,7 +2,6 @@
   <router-view></router-view>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
+<style lang="less" scoped></style>

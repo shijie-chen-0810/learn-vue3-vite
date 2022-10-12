@@ -10,6 +10,7 @@ import {
   AutoGenerateImports,
   DirResolverHelper,
 } from "vite-auto-import-resolvers";
+import vitePluginImp from "vite-plugin-imp";
 
 export default [
   // 布局系统
@@ -60,4 +61,13 @@ export default [
   OptimizationPersist(),
   // 生产环境资源压缩
   viteCompression(),
+  // antd-vue 按需加载
+  vitePluginImp({
+    libList: [
+      {
+        libName: "antd",
+        style: (name) => `antd/es/${name}/style`,
+      },
+    ],
+  }),
 ];

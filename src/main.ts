@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import "./styles/main.css";
+import "./global.less";
+import AntdComponent from "./antd";
 
 const app = createApp(App);
 
@@ -11,5 +12,7 @@ Object.values(modules).forEach((v) => {
     v.default(app);
   }
 });
-
+AntdComponent.forEach((component) => {
+  app.component(component.name, component);
+});
 app.mount("#app");
