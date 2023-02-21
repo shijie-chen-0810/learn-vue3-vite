@@ -9,6 +9,7 @@
     "dev:mock": "cross-env MOCK=ok vite"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
     "@vueuse/core": "^7.7.1",
     "ant-design-vue": "^3.2.13",
     "nprogress": "^0.2.0",
@@ -43,11 +44,15 @@
   "vite": {
     "optimizeDeps": {
       "include": [
+        "@ant-design/icons-vue",
         "@vueuse/core",
         "ant-design-vue",
         "ant-design-vue/es/button/style/css.js",
         "ant-design-vue/es/card/style/css.js",
+        "ant-design-vue/es/col/style/css.js",
         "ant-design-vue/es/layout/style/css.js",
+        "ant-design-vue/es/menu/style/css.js",
+        "ant-design-vue/es/row/style/css.js",
         "nprogress",
         "pinia",
         "umi-request",

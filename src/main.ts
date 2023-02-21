@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import "./global.less";
+import "ant-design-vue/dist/antd.css";
 import AntdComponent from "./antd";
 
 const app = createApp(App);

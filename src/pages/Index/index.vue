@@ -1,45 +1,28 @@
 <template>
-  <button @click="getData">请求</button>
-  <div>{{ data?.a }}</div>
-  <div>msg:{{ msg }}</div>
-  <Component
-    :msg="msg"
-    @handleClick="handleClick"
-    @update="handleUpdateClick"
-  />
+  <a-row :gutter="[16, 16]">
+    <a-col span="12">
+      <a-card style="height: 100%">
+        <request-demo />
+      </a-card>
+    </a-col>
+    <a-col span="12">
+      <a-card style="height: 100%">
+        <father-and-son-value />
+      </a-card>
+    </a-col>
+  </a-row>
 </template>
 
 <script setup lang="ts">
-import Component from "@/components/Component.vue";
-import globalStore from "@/stores/globalStore";
-import { fetchData } from "@/service/table";
-import { useRequest } from "vue-request";
-
-const msg = ref<string | number>("oooo");
-
-const { run: fetchTableData, data } = useRequest(fetchData, {
-  manual: true,
-  formatResult: (res) => {
-    msg.value = "ppp";
-    return res?.data;
-  },
-});
-const getData = () => {
-  fetchTableData({ a: 1 });
-};
-const handleClick = (id: number) => {
-  msg.value = "执行了handleClick";
-  console.log("执行了handleClick", id);
-};
-
-const handleUpdateClick = (value: string) => {
-  msg.value = "执行了handleUpdateClick";
-  console.log("执行了handleUpdateClick", value);
-};
-
-const main = globalStore();
-
-console.log(main.counter, main.name);
+import RequestDemo from "./components/requestDemo/index.vue";
+import FatherAndSonValue from "./components/fatherAndSonValue/index.vue";
 </script>
 
 <style lang="less"></style>
+
+<route>
+  {
+    name: "首页",
+    meta:{order:1}
+  }
+</route>

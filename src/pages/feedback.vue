@@ -1,14 +1,14 @@
 <template>
-  <div>table</div>
+  <router-view />
 </template>
 
 <script setup lang="ts"></script>
 
-<style></style>
+<style scoped></style>
 
 <route>
   {
-    name:'表格页面',
-    meta:{order:2}
+    name:'反馈管理',
+    meta:{order:3}
   }
 </route>

@@ -14,8 +14,12 @@ import vitePluginImp from "vite-plugin-imp";
 
 export default [
   // 布局系统
-  Layouts(),
+  Layouts({
+    layoutsDirs: "src/layouts", // 布局文件存放目录
+    defaultLayout: "default", // 默认布局，对应 src/layout/index.vue
+  }),
   Pages({
+    dirs: "src/pages", // 需要生成路由的文件目录
     // 设置<route />块里面的语言为json语言
     routeBlockLang: "json5",
     // 异步加载路由信息
@@ -27,7 +31,7 @@ export default [
     // 识别识别带有vue和tsx后缀的文件为路由
     extensions: ["vue", "tsx"],
     // 排除所有文件下components的文件生产路由
-    exclude: ["**/components/*.vue"],
+    exclude: ["**/components/**/**"],
     // 可通过该方法设置身份校验，设置layout
     extendRoute(route) {
       // console.log(route.path)
