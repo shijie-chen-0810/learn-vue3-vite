@@ -1,5 +1,5 @@
 <template>
-  <Component
+  <component
     :msg="msg"
     @handleClick="handleClick"
     @update="handleUpdateClick"
@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import Component from "@/components/Component.vue";
+import component from "./Component.vue";
 
 const msg = ref<string | number>("oooo");
 

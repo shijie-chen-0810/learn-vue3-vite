@@ -9,6 +9,7 @@
 <route>
   {
     name:'系统管理',
-    meta:{order:4}
+
+    meta:{order:4,  icon:'123'}
   }
 </route>

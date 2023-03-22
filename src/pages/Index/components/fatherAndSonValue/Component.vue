@@ -23,8 +23,8 @@ const trigger2 = () => {
 <template>
   <div>
     <div>子组件消息{{ msg }}</div>
-    <a-button @click="trigger1">子组件按钮handleClick</a-button>
-    <a-button @click="trigger2">子组件按钮update</a-button>
+    <el-button @click="trigger1">子组件按钮handleClick</el-button>
+    <el-button @click="trigger2">子组件按钮update</el-button>
   </div>
 </template>
 

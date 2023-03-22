@@ -6,3 +6,10 @@ export const fetchData = (query: any) => {
     params: query,
   });
 };
+
+export const fetchTableData = (query: any) => {
+  return request<API.BasePageResult<API.TableData>>("/table/list", {
+    method: "GET",
+    params: query,
+  });
+};

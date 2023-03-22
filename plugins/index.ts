@@ -10,7 +10,8 @@ import {
   AutoGenerateImports,
   DirResolverHelper,
 } from "vite-auto-import-resolvers";
-import vitePluginImp from "vite-plugin-imp";
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 export default [
   // 布局系统
@@ -31,7 +32,7 @@ export default [
     // 识别识别带有vue和tsx后缀的文件为路由
     extensions: ["vue", "tsx"],
     // 排除所有文件下components的文件生产路由
-    exclude: ["**/components/**/**"],
+    exclude: ["**/components/**/**/**"],
     // 可通过该方法设置身份校验，设置layout
     extendRoute(route) {
       // console.log(route.path)
@@ -58,6 +59,8 @@ export default [
     ],
     dts: "plugins/types/auto-imports.d.ts",
     imports: AutoGenerateImports(),
+    // @ts-ignore
+    resolvers: [ElementPlusResolver()],
   }),
   // 将包信息文件作为 vite 的配置文件之一，为 vite-plugin-optimize-persist 所用
   PkgConfig(),
@@ -66,12 +69,15 @@ export default [
   // 生产环境资源压缩
   viteCompression(),
   // antd-vue 按需加载
-  vitePluginImp({
-    libList: [
-      {
-        libName: "antd",
-        style: (name) => `antd/es/${name}/style`,
-      },
-    ],
+  Components({
+    resolvers: [ElementPlusResolver()],
   }),
+  // vitePluginImp({
+  //   libList: [
+  //     {
+  //       libName: "antd",
+  //       style: (name) => `antd/lib/${name}/style`,
+  //     },
+  //   ],
+  // }),
 ];

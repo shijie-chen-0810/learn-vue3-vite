@@ -1,16 +1,16 @@
 <template>
-  <a-row :gutter="[16, 16]">
-    <a-col span="12">
-      <a-card style="height: 100%">
+  <el-row :gutter="16">
+    <el-col :span="12">
+      <el-card style="height: 100%">
         <request-demo />
-      </a-card>
-    </a-col>
-    <a-col span="12">
-      <a-card style="height: 100%">
+      </el-card>
+    </el-col>
+    <el-col :span="12">
+      <el-card style="height: 100%">
         <father-and-son-value />
-      </a-card>
-    </a-col>
-  </a-row>
+      </el-card>
+    </el-col>
+  </el-row>
 </template>
 
 <script setup lang="ts">

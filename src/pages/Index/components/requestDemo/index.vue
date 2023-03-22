@@ -1,7 +1,7 @@
 <template>
-  <a-button @click="getData">请求</a-button>
+  <el-button @click="getData">请求</el-button>
   <div>{{ data?.a }}</div>
-  <div>msg:{{ msg }}</div>
+  <div>msg:{{ msg }}<sub :style="{ transform: 'scale(0.5)' }">123</sub></div>
 </template>
 
 <script setup lang="ts">
@@ -14,7 +14,7 @@ const { run: fetchTableData, data } = useRequest(fetchData, {
   manual: true,
   formatResult: (res) => {
     msg.value = "ppp";
-    return res?.data;
+    return res?.result;
   },
 });
 
