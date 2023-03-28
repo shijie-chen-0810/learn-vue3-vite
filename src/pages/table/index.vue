@@ -1,7 +1,7 @@
 <template>
   <el-table
     :row-key="(record: API.TableData) => record.id"
-    :data="dataSource?.list"
+    :data="data?.list"
     :loading="loading"
   >
     <el-table-column prop="name" label="姓名" width="180" />
@@ -66,12 +66,7 @@ let curRowData = reactive<Partial<API.TableData>>({
   address: "",
 });
 const pageSizeOptions = ref<number[]>([10, 20, 30, 40, 50]);
-const {
-  data: dataSource,
-  loading,
-  current,
-  pageSize,
-} = usePagination(fetchTableData, {
+const { data, loading, current, pageSize } = usePagination(fetchTableData, {
   pagination: {
     currentKey: "pageNo",
     pageSizeKey: "pageSize",

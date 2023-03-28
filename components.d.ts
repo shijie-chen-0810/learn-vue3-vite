@@ -20,6 +20,7 @@ declare module '@vue/runtime-core' {
     ElDescriptionsItem: typeof import('element-plus/es')['ElDescriptionsItem']
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElLayout: typeof import('element-plus/es')['ElLayout']
     ElLayoutContent: typeof import('element-plus/es')['ElLayoutContent']
     ElLayoutHeader: typeof import('element-plus/es')['ElLayoutHeader']

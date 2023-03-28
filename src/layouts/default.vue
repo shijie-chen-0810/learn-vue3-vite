@@ -73,6 +73,6 @@ const routes = generatedRoutes
 }
 .main {
   height: calc(100vh - 48px);
-  overflow: scroll;
+  overflow-y: scroll;
 }
 </style>

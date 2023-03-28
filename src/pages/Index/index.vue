@@ -1,13 +1,20 @@
 <template>
-  <el-row :gutter="16">
+  <el-row class="row" :gutter="16">
     <el-col :span="12">
-      <el-card style="height: 100%">
+      <el-card style="height: 100%" header="请求示例">
         <request-demo />
       </el-card>
     </el-col>
     <el-col :span="12">
-      <el-card style="height: 100%">
+      <el-card :style="{ height: '100%' }" header="父子传值">
         <father-and-son-value />
+      </el-card>
+    </el-col>
+  </el-row>
+  <el-row class="row" :gutter="16">
+    <el-col :span="12">
+      <el-card :style="{ height: '100%' }" header="v-model">
+        <self-v-model></self-v-model>
       </el-card>
     </el-col>
   </el-row>
@@ -16,9 +23,14 @@
 <script setup lang="ts">
 import RequestDemo from "./components/requestDemo/index.vue";
 import FatherAndSonValue from "./components/fatherAndSonValue/index.vue";
+import SelfVModel from "./components/SelfVModel/index.vue";
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.row {
+  margin-bottom: 14px;
+}
+</style>
 
 <route>
   {
