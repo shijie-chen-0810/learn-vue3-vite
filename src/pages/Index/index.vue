@@ -14,7 +14,12 @@
   <el-row class="row" :gutter="16">
     <el-col :span="12">
       <el-card :style="{ height: '100%' }" header="v-model">
-        <self-v-model></self-v-model>
+        <self-v-model />
+      </el-card>
+    </el-col>
+    <el-col :span="12">
+      <el-card :style="{ height: '100%' }" header="IntersectionObserver">
+        <scroll-into-view />
       </el-card>
     </el-col>
   </el-row>
@@ -24,6 +29,7 @@
 import RequestDemo from "./components/requestDemo/index.vue";
 import FatherAndSonValue from "./components/fatherAndSonValue/index.vue";
 import SelfVModel from "./components/SelfVModel/index.vue";
+import ScrollIntoView from "./components/ScrollIntoView/index.vue";
 </script>
 
 <style lang="less">
