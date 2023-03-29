@@ -1,14 +1,18 @@
 import { createApp } from "vue";
+import router from "@/modules/router";
+import store from "@/modules/pinia";
+import NProgress from "nprogress";
 import App from "./App.vue";
+import "@/modules/request";
 import "./global.less";
 
 const app = createApp(App);
 
-// 插件自动加载
-const modules = import.meta.globEager("./modules/**/*.ts");
-Object.values(modules).forEach((v) => {
-  if (typeof v.default === "function") {
-    v.default(app);
-  }
+router.beforeEach(() => {
+  NProgress.start();
 });
-app.mount("#app");
+router.afterEach(() => {
+  NProgress.done();
+});
+
+app.use(router).use(store).mount("#app");

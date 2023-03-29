@@ -15,7 +15,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["element-plus/global"]
+    "types": ["element-plus/global", "@types/web-bluetooth"]
   },
   "include": [
     "srcipts",
@@ -24,7 +24,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "plugins/types/auto-imports.d.ts"
+    "plugins/types/auto-imports.d.ts",
+    "components.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

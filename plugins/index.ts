@@ -5,8 +5,8 @@ import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
 import viteCompression from "vite-plugin-compression";
 import {
-  AutoGenerateImports,
   DirResolverHelper,
+  AutoGenerateImports,
 } from "vite-auto-import-resolvers";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
@@ -25,7 +25,7 @@ export default [
     ],
     dts: "plugins/types/auto-imports.d.ts",
     imports: AutoGenerateImports(),
-    // @ts-ignore
+
     resolvers: [ElementPlusResolver()],
   }),
   // 将包信息文件作为 vite 的配置文件之一，为 vite-plugin-optimize-persist 所用

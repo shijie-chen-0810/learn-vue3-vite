@@ -1,6 +1,5 @@
-import request, { extend } from "umi-request";
+import request from "umi-request";
 
-import { ResponseError } from "umi-request";
 /**
  * 异常处理程序
  * @see https://beta-pro.ant.design/docs/request-cn
