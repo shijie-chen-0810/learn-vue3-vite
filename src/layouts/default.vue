@@ -37,9 +37,9 @@
   </el-container>
 </template>
 <script setup lang="ts">
-import generatedRoutes from "virtual:generated-pages";
+import { routes as baseRoutes } from "@/modules/router";
 const router = useRouter();
-const routes = generatedRoutes
+const routes = baseRoutes
   .filter((route) => !["/404", "/403"].includes(route.path))
   .sort(
     (pre, cur) => (pre.meta?.order as number) - (cur.meta?.order as number)

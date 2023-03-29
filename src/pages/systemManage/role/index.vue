@@ -1,14 +1,7 @@
 <template>
-  <div>systemManage-role</div>
+  <span>systemManage-role1</span>
 </template>
 
 <script setup lang="ts"></script>
 
 <style scoped></style>
-
-<route>
-  {
-    name:'角色管理',
-    meta:{}
-  }
-</route>

@@ -37,10 +37,3 @@ import ScrollIntoView from "./components/ScrollIntoView/index.vue";
   margin-bottom: 14px;
 }
 </style>
-
-<route>
-  {
-    name: "首页",
-    meta:{order:1}
-  }
-</route>

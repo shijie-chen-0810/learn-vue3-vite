@@ -91,10 +91,3 @@ const updateRowData = (data: API.TableData) => {
   justify-content: flex-end;
 }
 </style>
-
-<route>
-  {
-    name:'表格页面',
-    meta:{order:2}
-  }
-</route>

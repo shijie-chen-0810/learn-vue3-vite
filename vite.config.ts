@@ -13,6 +13,7 @@ export default () => {
       MOCK: JSON.stringify(MOCK),
     },
     server: {
+      hmr: true,
       proxy: {
         "/internal/": {
           target: "http://47.96.177.235:8077", // dev服务器
