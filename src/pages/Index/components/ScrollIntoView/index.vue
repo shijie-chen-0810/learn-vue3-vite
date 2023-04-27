@@ -24,7 +24,7 @@ useIntoView(
 
 <style scoped>
 #container {
-  height: 100px;
+  height: 200px;
   overflow-y: scroll;
 }
 .item {

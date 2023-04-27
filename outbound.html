@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://g.alicdn.com/code/lib/antd/4.17.3/antd.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://g.alicdn.com/xixi-design/xixi-design/2.7.0/index.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>热线UI demo</title>
+  </head>
+  <body>
+    <div class="root">
+      <div id="root" class="root-content"></div>
+    </div>
+
+    <script src="https://g.alicdn.com/code/lib/react/17.0.1/umd/react.production.min.js"></script>
+    <script src="https://g.alicdn.com/code/lib/react-dom/17.0.1/umd/react-dom.production.min.js"></script>
+    <script src="https://g.alicdn.com/code/lib/antd/4.17.3/antd.min.js"></script>
+    <script src="https://g.alicdn.com/antelope/phone-sdk/1.1.0/phone-ui.js"></script>
+    <script>
+      //rest服务器域名
+      const baseURL = "";
+      //websocket服务器域名
+      const wsURL = "";
+      //租户实例id
+      const instanceId = "xxxx";
+      //用户登录token
+      const token = "xxxxx";
+
+      window.renderHotlineClientUI(document.getElementById("root"), {
+        className: "root-class",
+        //上行rest请求域名
+        //租户实例id
+        instanceId: "ccc_xp_pre_2303159174",
+        //当前用户登录token
+        token:
+          "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZGV2ZWxvcGVyLnJoaW5va2Vlbi5jb20iLCJleHAiOjE2ODIzODY4MjUsInVzZXJfbmFtZSI6IjIwMTA1NTIzMiIsImp0aSI6ImUxNTQ4OGZiLWRkOTUtNDdkMS1iZTBhLWY3YWM4NGY5YWFkNyIsImNsaWVudF9pZCI6IkNvbXBhc3NDYWxsaW5nQ2VudGVyX3J0NWNJeCIsInNjb3BlIjpbImZ1eXVuLWRldiJdfQ.VlMDCNIFIwwtSArMewnEVz8V9yz4iNSvximUFYLY0jl4APJWzUcPgHHA0dPlgzcL0H8xNSYZHXR4EdS3WWznz4nwgBDFLJtOJOz8aSTf1WXZ5H7HPS81QxDBLmRZXoQu_QMK1jr4McVpBmdbtfa_HHhlTXJd_KALhcozxVxmyK7MD0v0BaxuNHvzCz57ra9yaWYRVbGMzC7VF9TNVke7yOw77hvBFN8Z_GywLDN_V9HhWftazMoXWQ1A-UrmY0VNy2YVrNlkMf13T6iMR9XtdRrgqJJmG3X_6lJsNH6p6Q5WyfWc8yq_dFLLg7IuqRWDAFoaefrmSlWePuwnATh3wg",
+        //日志等级
+        logLevel: 1,
+      });
+    </script>
+  </body>
+</html>

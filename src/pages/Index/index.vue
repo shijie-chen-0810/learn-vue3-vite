@@ -13,13 +13,25 @@
   </el-row>
   <el-row class="row" :gutter="16">
     <el-col :span="12">
-      <el-card :style="{ height: '100%' }" header="v-model">
-        <self-v-model />
+      <el-card :style="{ height: '100%' }" header="pinia-todoList">
+        <todo-list />
       </el-card>
     </el-col>
     <el-col :span="12">
-      <el-card :style="{ height: '100%' }" header="IntersectionObserver">
+      <el-card :style="{ height: '100%' }" header="intersection-observer`">
         <scroll-into-view />
+      </el-card>
+    </el-col>
+  </el-row>
+  <el-row class="row" :gutter="16">
+    <el-col :span="12">
+      <el-card :style="{ height: '100%' }" header="顺序动画">
+        <animation-sequence />
+      </el-card>
+    </el-col>
+    <el-col :span="12">
+      <el-card :style="{ height: '100%' }" header="v-model">
+        <self-v-model />
       </el-card>
     </el-col>
   </el-row>
@@ -30,6 +42,8 @@ import RequestDemo from "./components/requestDemo/index.vue";
 import FatherAndSonValue from "./components/fatherAndSonValue/index.vue";
 import SelfVModel from "./components/SelfVModel/index.vue";
 import ScrollIntoView from "./components/ScrollIntoView/index.vue";
+import AnimationSequence from "./components/AnimationSequence/index.vue";
+import TodoList from "./components/TodoList/index.vue";
 </script>
 
 <style lang="less">
