@@ -52,4 +52,39 @@ export default [
       };
     },
   },
+  {
+    url: "/api/index/todoList",
+    method: "get",
+    response: () => {
+      return {
+        code: 200,
+        message: "ok",
+        result: {
+          id: 1,
+          status: false,
+          content: 1,
+          next: {
+            id: 2,
+            status: false,
+            content: 2,
+            next: {
+              id: 3,
+              status: true,
+              content: 3,
+              next: {
+                id: 4,
+                status: false,
+                content: 4,
+                next: null,
+                prev: null,
+              },
+              prev: null,
+            },
+            prev: null,
+          },
+          prev: null,
+        },
+      };
+    },
+  },
 ];

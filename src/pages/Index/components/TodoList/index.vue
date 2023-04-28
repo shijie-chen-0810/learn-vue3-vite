@@ -122,6 +122,9 @@ const onEditSubmit = (id: number, form: FormInstance | undefined) => {
   todoStore.editTodoItem(id, editFormValue.content);
   editItemId.value = null;
 };
+onMounted(() => {
+  todoStore.queryList();
+});
 </script>
 
 <style scoped>

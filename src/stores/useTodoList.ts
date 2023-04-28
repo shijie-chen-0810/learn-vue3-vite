@@ -1,3 +1,4 @@
+import { getTodoList } from "@/service/table";
 import { defineStore } from "pinia";
 
 interface State {
@@ -70,6 +71,10 @@ const useTodoList = defineStore("todoList", {
     },
   },
   actions: {
+    async queryList() {
+      const result = await getTodoList(1);
+      this.list = result.result;
+    },
     addTodoitem(content: string) {
       if (!this.list) {
         return (this.list = {
