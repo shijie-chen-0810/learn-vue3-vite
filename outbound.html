@@ -11,6 +11,10 @@
       href="https://g.alicdn.com/xixi-design/xixi-design/2.7.0/index.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://g.alicdn.com/code/lib/react/17.0.1/umd/react.production.min.js"></script>
+    <script src="https://g.alicdn.com/code/lib/react-dom/17.0.1/umd/react-dom.production.min.js"></script>
+    <script src="https://g.alicdn.com/code/lib/antd/4.17.3/antd.min.js"></script>
+    <script src="https://g.alicdn.com/antelope/phone-sdk/1.1.3/phone-ui.js"></script>
     <title>热线UI demo</title>
   </head>
   <body>
@@ -18,30 +22,20 @@
       <div id="root" class="root-content"></div>
     </div>
 
-    <script src="https://g.alicdn.com/code/lib/react/17.0.1/umd/react.production.min.js"></script>
-    <script src="https://g.alicdn.com/code/lib/react-dom/17.0.1/umd/react-dom.production.min.js"></script>
-    <script src="https://g.alicdn.com/code/lib/antd/4.17.3/antd.min.js"></script>
-    <script src="https://g.alicdn.com/antelope/phone-sdk/1.1.0/phone-ui.js"></script>
     <script>
-      //rest服务器域名
-      const baseURL = "";
-      //websocket服务器域名
-      const wsURL = "";
-      //租户实例id
-      const instanceId = "xxxx";
-      //用户登录token
-      const token = "xxxxx";
-
       window.renderHotlineClientUI(document.getElementById("root"), {
         className: "root-class",
         //上行rest请求域名
         //租户实例id
-        instanceId: "ccc_xp_pre_2303159174",
+        instanceId: "XiXi_ding614949de72a0b8a2_200209022",
         //当前用户登录token
         token:
-          "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZGV2ZWxvcGVyLnJoaW5va2Vlbi5jb20iLCJleHAiOjE2ODIzODY4MjUsInVzZXJfbmFtZSI6IjIwMTA1NTIzMiIsImp0aSI6ImUxNTQ4OGZiLWRkOTUtNDdkMS1iZTBhLWY3YWM4NGY5YWFkNyIsImNsaWVudF9pZCI6IkNvbXBhc3NDYWxsaW5nQ2VudGVyX3J0NWNJeCIsInNjb3BlIjpbImZ1eXVuLWRldiJdfQ.VlMDCNIFIwwtSArMewnEVz8V9yz4iNSvximUFYLY0jl4APJWzUcPgHHA0dPlgzcL0H8xNSYZHXR4EdS3WWznz4nwgBDFLJtOJOz8aSTf1WXZ5H7HPS81QxDBLmRZXoQu_QMK1jr4McVpBmdbtfa_HHhlTXJd_KALhcozxVxmyK7MD0v0BaxuNHvzCz57ra9yaWYRVbGMzC7VF9TNVke7yOw77hvBFN8Z_GywLDN_V9HhWftazMoXWQ1A-UrmY0VNy2YVrNlkMf13T6iMR9XtdRrgqJJmG3X_6lJsNH6p6Q5WyfWc8yq_dFLLg7IuqRWDAFoaefrmSlWePuwnATh3wg",
+          "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZGV2ZWxvcGVyLnJoaW5va2Vlbi5jb20iLCJleHAiOjE2ODU2NDM2ODAsInVzZXJfbmFtZSI6IumZiOS4luadsCIsImp0aSI6IjhlNjdiMDFjLTFlYzMtNDkzYy05YmVkLTg0NTg3YmRlOWE4YiIsImNsaWVudF9pZCI6IjY5YWEyMGU5LWNjNDYtNDdmZS05YjIxLTZlN2UxODc3ZGZhYl84ZWdydmEiLCJzY29wZSI6WyJmdXl1bi1kZXYiXX0.ikG_Fg99ETGPkZIgBX8Rgx4mUE1CpdFwLzouSmsK3D86GWp27g8dFA5KagE0yjoQSgl1sVL-MQcTZzlz9xD5dqBXXP0PBWSfVc_Q_bPaa8Zj10coTuO1eBqPOu7em6b4zbHPNxrY3TCMQfHEfP4clh3Si2zkRHxykYRtMRk1--V8Ol3PJMuYkIFh2BLXzC_KoryiprSrrg1sZCGUjpksRM-Vh0mNnw2exzobZtP2CXo4nGFKoy6h8nhoqU1aPlPNiSyR4wmCZcHzGcZ_YTvU1-MLPYNhjM5yWZOaqD6M-4QjSkDLa3lfYyPN7nPD0pBQDrsnP9T061FA4-Tb83zMxw",
         //日志等级
         logLevel: 1,
+        onServiceMessage: (...arg) => {
+          console.log(arg, " arg");
+        },
       });
     </script>
   </body>

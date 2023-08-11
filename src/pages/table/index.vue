@@ -4,7 +4,18 @@
     :data="data?.list"
     :loading="loading"
   >
-    <el-table-column prop="name" label="姓名" width="180" />
+    <el-table-column label="默认" width="80">
+      <template #default="scope">
+        <el-radio
+          :model-value="scope.row.flag"
+          @change="defaltChange"
+          :label="1"
+        >
+          <span></span>
+        </el-radio>
+      </template>
+    </el-table-column>
+    <el-table-column prop="name" label="姓名5.5" width="180" />
     <el-table-column prop="age" label="年龄" width="180" />
     <el-table-column prop="address" label="地址" />
     <el-table-column prop="action" label="操作" width="180">
@@ -83,9 +94,14 @@ const showRowData = (data: API.TableData) => {
 const updateRowData = (data: API.TableData) => {
   console.log(data);
 };
+
+const defaltChange = (val: any) => {
+  console.log(val, "val");
+};
 </script>
 
 <style>
+/* @import url("@grapecity/activereports/styles/ar-js-ui.css"); */
 .pagination {
   padding: 12px;
   justify-content: flex-end;

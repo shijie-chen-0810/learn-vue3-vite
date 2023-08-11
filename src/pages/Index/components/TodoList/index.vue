@@ -89,12 +89,8 @@ const showType = ref<"allList" | "doneList" | "notDoneList">("allList");
 const editItemId = ref<number | null>();
 const form = ref<FormInstance>();
 const editForm = ref<FormInstance>();
-const formValue = reactive<{
-  content: string;
-}>({ content: "" });
-const editFormValue = reactive<{
-  content: string;
-}>({ content: "" });
+const formValue = reactive<{ content: string }>({ content: "" });
+const editFormValue = reactive<{ content: string }>({ content: "" });
 
 const time = 200;
 let timeOut: number;

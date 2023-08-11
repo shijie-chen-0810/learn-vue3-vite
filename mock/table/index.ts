@@ -32,6 +32,7 @@ export default [
             id: "@id",
             "key|1-1000": 1,
             name: "@cname",
+            "flag|1": [0, 1],
             "age|1-1000": 1,
             address: "@csentence(16,50) ",
           },
