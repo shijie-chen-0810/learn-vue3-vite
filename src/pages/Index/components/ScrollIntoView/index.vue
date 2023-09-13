@@ -3,7 +3,9 @@
     <div class="item" v-for="(item, index) in listArrRef">
       {{ `${index + 1} ${item}` }}
     </div>
-    <div class="item" id="target">target</div>
+    <div class="item" id="target">
+      <SubComponent v-if="hasInsertView"></SubComponent>
+    </div>
     <div class="item" v-for="(item, index) in listArrRef">
       {{ `${index + 1} ${item}` }}
     </div>
@@ -11,13 +13,16 @@
 </template>
 
 <script setup lang="ts">
+import SubComponent from "./SubComponent.vue";
 import useIntoView from "@/hooks/useIntoView";
 const listArr = new Array(30).fill("-");
 const listArrRef = ref<string[]>(listArr);
+const hasInsertView = ref<boolean>(false);
 useIntoView(
-  { containerId: "#container", targetId: "#target", emitOnce: false },
+  { containerId: "#container", targetId: "#target", emitOnce: true },
   () => {
     console.log("执行");
+    hasInsertView.value = true;
   }
 );
 </script>

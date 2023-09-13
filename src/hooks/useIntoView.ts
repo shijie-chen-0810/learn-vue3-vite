@@ -13,7 +13,6 @@ const useIntoView = (options: IntoViewOptions, callback: Function) => {
   const isFirstIntoView = ref<boolean>(true);
   onMounted(() => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
-      console.log(entries);
       if (entries[0].isIntersecting) {
         if (options.emitOnce && !isFirstIntoView.value) return;
         callback();
