@@ -1,0 +1,31 @@
+.option-container{
+  position: relative;
+  display: flex;
+  height: 28px;
+  width: max-content;
+  background-color: #ccd0d6;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  .option-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding: 3px 10px;
+    z-index: 2;
+    color: #949495;
+    cursor: pointer;
+    transition:0.35s;
+  }
+  .active-item{
+    color: #fff;
+  }
+  .high-block{
+    position: absolute;
+    background-color: #df4f51;
+    border-radius: 50px;
+    height: 28px;
+    z-index:1;
+    transition:0.35s;
+  }
+}
